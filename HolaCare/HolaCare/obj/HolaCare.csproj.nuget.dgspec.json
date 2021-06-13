@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "D:\\TLCN\\Backend\\HolaCare\\HolaCare\\HolaCare.csproj": {}
+    "G:\\Github\\BE_EC18B008\\HolaCare\\HolaCare\\HolaCare.csproj": {}
   },
   "projects": {
-    "D:\\TLCN\\Backend\\HolaCare\\HolaCare\\HolaCare.csproj": {
+    "G:\\Github\\BE_EC18B008\\HolaCare\\HolaCare\\HolaCare.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\TLCN\\Backend\\HolaCare\\HolaCare\\HolaCare.csproj",
+        "projectUniqueName": "G:\\Github\\BE_EC18B008\\HolaCare\\HolaCare\\HolaCare.csproj",
         "projectName": "HolaCare",
-        "projectPath": "D:\\TLCN\\Backend\\HolaCare\\HolaCare\\HolaCare.csproj",
-        "packagesPath": "C:\\Users\\tlhla\\.nuget\\packages\\",
-        "outputPath": "D:\\TLCN\\Backend\\HolaCare\\HolaCare\\obj\\",
+        "projectPath": "G:\\Github\\BE_EC18B008\\HolaCare\\HolaCare\\HolaCare.csproj",
+        "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
+        "outputPath": "G:\\Github\\BE_EC18B008\\HolaCare\\HolaCare\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\tlhla\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,6 +30,7 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -37,6 +42,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
@@ -79,7 +85,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }

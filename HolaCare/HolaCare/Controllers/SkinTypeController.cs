@@ -19,7 +19,7 @@ namespace HolaCare.Controllers
         {
             _context = context;
         }
-
+        //12/3
         // GET: api/SkinType
         [HttpGet]
         public async Task<ActionResult<IEnumerable<SkinType>>> GetSkinTypes()

@@ -19,14 +19,14 @@ namespace HolaCare.Controllers
         {
             _context = context;
         }
-
+        //oke
         // GET: api/CommentProduct
         [HttpGet]
         public async Task<ActionResult<IEnumerable<CommentProduct>>> GetCommentProducts()
         {
             return await _context.CommentProducts.ToListAsync();
         }
-
+        //oke
         // GET: api/CommentProduct/5
         [HttpGet("{id}")]
         public async Task<ActionResult<CommentProduct>> GetCommentProduct(string id)
