@@ -30,7 +30,7 @@ namespace Express.Controllers
 
         // GET: api/ShipCompany/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<ShipCompany>> GetShipCompany(string id)
+        public async Task<ActionResult<ShipCompany>> GetShipCompany(Guid id)
         {
             var shipCompany = await _context.ShipCompanies.FindAsync(id);
 
@@ -114,7 +114,7 @@ namespace Express.Controllers
 
         // DELETE: api/ShipCompany/5
         [HttpDelete("{id}")]
-        public async Task<ActionResult<ShipCompany>> DeleteShipCompany(string id)
+        public async Task<ActionResult<ShipCompany>> DeleteShipCompany(Guid id)
         {
             var shipCompany = await _context.ShipCompanies.FindAsync(id);
             if (shipCompany == null)

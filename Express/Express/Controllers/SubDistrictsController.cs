@@ -30,7 +30,7 @@ namespace Express.Controllers
 
         // GET: api/Bill/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Bill>> GetBill(string id)
+        public async Task<ActionResult<Bill>> GetBill(Guid id)
         {
             var bill = await _context.Bills.FindAsync(id);
 
@@ -114,7 +114,7 @@ namespace Express.Controllers
 
         // DELETE: api/Bill/5
         [HttpDelete("{id}")]
-        public async Task<ActionResult<Bill>> DeleteBill(string id)
+        public async Task<ActionResult<Bill>> DeleteBill(Guid id)
         {
             var bill = await _context.Bills.FindAsync(id);
             if (bill == null)

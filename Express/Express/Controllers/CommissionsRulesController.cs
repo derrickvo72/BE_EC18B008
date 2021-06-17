@@ -30,7 +30,7 @@ namespace Express.Controllers
 
         // GET: api/CommissionsRule/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<CommissionsRule>> GetCommissionsRule(string id)
+        public async Task<ActionResult<CommissionsRule>> GetCommissionsRule(Guid id)
         {
             var commissionsRule = await _context.CommissionsRules.FindAsync(id);
 
@@ -114,7 +114,7 @@ namespace Express.Controllers
 
         // DELETE: api/CommissionsRule/5
         [HttpDelete("{id}")]
-        public async Task<ActionResult<CommissionsRule>> DeleteCommissionsRule(string id)
+        public async Task<ActionResult<CommissionsRule>> DeleteCommissionsRule(Guid id)
         {
             var commissionsRule = await _context.CommissionsRules.FindAsync(id);
             if (commissionsRule == null)

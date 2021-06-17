@@ -30,7 +30,7 @@ namespace Express.Controllers
 
         // GET: api/SubDistrict/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<SubDistricts>> GetSubDistrict(string id)
+        public async Task<ActionResult<SubDistricts>> GetSubDistrict(Guid id)
         {
             var subDistrict = await _context.SubDistricts.FindAsync(id);
 
@@ -114,7 +114,7 @@ namespace Express.Controllers
 
         // DELETE: api/SubDistrict/5
         [HttpDelete("{id}")]
-        public async Task<ActionResult<SubDistricts>> DeleteSubDistrict(string id)
+        public async Task<ActionResult<SubDistricts>> DeleteSubDistrict(Guid id)
         {
             var subDistrict = await _context.SubDistricts.FindAsync(id);
             if (subDistrict == null)

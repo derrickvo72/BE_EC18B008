@@ -30,7 +30,7 @@ namespace Express.Controllers
 
         // GET: api/Province/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Provinces>> GetProvince(string id)
+        public async Task<ActionResult<Provinces>> GetProvince(Guid id)
         {
             var province = await _context.Provinces.FindAsync(id);
 
@@ -114,7 +114,7 @@ namespace Express.Controllers
 
         // DELETE: api/Province/5
         [HttpDelete("{id}")]
-        public async Task<ActionResult<Provinces>> DeleteProvince(string id)
+        public async Task<ActionResult<Provinces>> DeleteProvince(Guid id)
         {
             var province = await _context.Provinces.FindAsync(id);
             if (province == null)

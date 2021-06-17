@@ -30,7 +30,7 @@ namespace Express.Controllers
 
         // GET: api/ShipDiscount/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<ShipDiscount>> GetShipDiscount(string id)
+        public async Task<ActionResult<ShipDiscount>> GetShipDiscount(Guid id)
         {
             var shipDiscount = await _context.ShipDiscounts.FindAsync(id);
 
@@ -114,7 +114,7 @@ namespace Express.Controllers
 
         // DELETE: api/ShipDiscount/5
         [HttpDelete("{id}")]
-        public async Task<ActionResult<ShipDiscount>> DeleteShipDiscount(string id)
+        public async Task<ActionResult<ShipDiscount>> DeleteShipDiscount(Guid id)
         {
             var shipDiscount = await _context.ShipDiscounts.FindAsync(id);
             if (shipDiscount == null)

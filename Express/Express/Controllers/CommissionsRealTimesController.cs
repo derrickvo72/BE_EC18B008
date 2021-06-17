@@ -29,7 +29,7 @@ namespace Express.Controllers
         }
         // GET: api/CommissionsRealTime/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<CommissionsRealTime>> GetCommissionsRealTime(string id)
+        public async Task<ActionResult<CommissionsRealTime>> GetCommissionsRealTime(Guid id)
         {
             var commissionsRealTime = await _context.CommissionsRealTimes.FindAsync(id);
 
@@ -113,7 +113,7 @@ namespace Express.Controllers
 
             // DELETE: api/CommissionsRealTime/5
             [HttpDelete("{id}")]
-        public async Task<ActionResult<CommissionsRealTime>> DeleteCommissionsRealTime(string id)
+        public async Task<ActionResult<CommissionsRealTime>> DeleteCommissionsRealTime(Guid id)
         {
             var commissionsRealTime = await _context.CommissionsRealTimes.FindAsync(id);
             if (commissionsRealTime == null)
