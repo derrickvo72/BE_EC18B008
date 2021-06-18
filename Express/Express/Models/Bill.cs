@@ -18,6 +18,11 @@ namespace Express.Models
         public float weight { get; set; }
         public string ShippingTime { get; set; }
         public string PaymentMethod { get; set; }
+        public Boolean Prepair { get; set; }
+        public Boolean ShipReceive { get; set; }
+        public Boolean Shipping { get; set; }
+        public Boolean PostReceive { get; set; }
+        public Boolean ShippingToC { get; set; }
         public Boolean ShippingDone { get; set; }
         public virtual BillStatusDetail StatusDetail { get; set; }
         public virtual CommissionsRealTime CommisstionsRealTime { get; set; }

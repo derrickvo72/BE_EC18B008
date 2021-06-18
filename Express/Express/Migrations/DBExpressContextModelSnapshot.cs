@@ -29,6 +29,12 @@ namespace Express.Migrations
                     b.Property<string>("PaymentMethod")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<bool>("PostReceive")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("Prepair")
+                        .HasColumnType("bit");
+
                     b.Property<string>("ReceiveAdd")
                         .HasColumnType("nvarchar(max)");
 
@@ -41,6 +47,12 @@ namespace Express.Migrations
                     b.Property<string>("SendPhone")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<bool>("ShipReceive")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("Shipping")
+                        .HasColumnType("bit");
+
                     b.Property<bool>("ShippingDone")
                         .HasColumnType("bit");
 
@@ -49,6 +61,9 @@ namespace Express.Migrations
 
                     b.Property<string>("ShippingTime")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("ShippingToC")
+                        .HasColumnType("bit");
 
                     b.Property<string>("Userid")
                         .HasColumnType("nvarchar(450)");
@@ -71,23 +86,23 @@ namespace Express.Migrations
                     b.Property<string>("Billid")
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<bool>("PostReceive")
-                        .HasColumnType("bit");
+                    b.Property<string>("PostReceive")
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<bool>("Prepair")
-                        .HasColumnType("bit");
+                    b.Property<string>("Prepair")
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<bool>("ShipReceive")
-                        .HasColumnType("bit");
+                    b.Property<string>("ShipReceive")
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<bool>("Shipping")
-                        .HasColumnType("bit");
+                    b.Property<string>("Shipping")
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<bool>("ShippingDone")
-                        .HasColumnType("bit");
+                    b.Property<string>("ShippingDone")
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<bool>("ShippingToC")
-                        .HasColumnType("bit");
+                    b.Property<string>("ShippingToC")
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("IDStatus");
 
