@@ -118,9 +118,6 @@ G:\EC\Express\Express\bin\Debug\netcoreapp3.1\ru\Microsoft.CodeAnalysis.Workspac
 G:\EC\Express\Express\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
 G:\EC\Express\Express\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 G:\EC\Express\Express\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
-G:\EC\Express\Express\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
-G:\EC\Express\Express\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
-G:\EC\Express\Express\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
 G:\EC\Express\Express\bin\Debug\netcoreapp3.1\runtimes\alpine-x64\native\libe_sqlite3.so
 G:\EC\Express\Express\bin\Debug\netcoreapp3.1\runtimes\linux-arm\native\libe_sqlite3.so
 G:\EC\Express\Express\bin\Debug\netcoreapp3.1\runtimes\linux-arm64\native\libe_sqlite3.so
@@ -142,17 +139,10 @@ G:\EC\Express\Express\obj\Debug\netcoreapp3.1\Express.csproj.CopyComplete
 G:\EC\Express\Express\obj\Debug\netcoreapp3.1\Express.dll
 G:\EC\Express\Express\obj\Debug\netcoreapp3.1\Express.pdb
 G:\EC\Express\Express\obj\Debug\netcoreapp3.1\Express.genruntimeconfig.cache
-G:\EC\Express\Express\bin\Debug\netcoreapp3.1\EntityFramework.SqlServer.dll
-G:\EC\Express\Express\bin\Debug\netcoreapp3.1\EntityFramework.dll
 G:\EC\Express\Express\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
-G:\EC\Express\Express\bin\Debug\netcoreapp3.1\System.CodeDom.dll
-G:\EC\Express\Express\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
 G:\EC\Express\Express\bin\Debug\netcoreapp3.1\System.Text.Encodings.Web.dll
 G:\EC\Express\Express\bin\Debug\netcoreapp3.1\runtimes\linux-mips64\native\libe_sqlite3.so
-G:\EC\Express\Express\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
-G:\EC\Express\Express\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 G:\EC\Express\Express\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
-G:\EC\Express\Express\obj\Debug\netcoreapp3.1\Express.csprojAssemblyReference.cache
 G:\EC\Express\Express\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.Internal.dll
 G:\EC\Express\Express\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
 G:\EC\Express\Express\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
@@ -170,3 +160,7 @@ G:\EC\Express\Express\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\Microsoft.
 G:\EC\Express\Express\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
 G:\EC\Express\Express\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
 G:\EC\Express\Express\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+G:\EC\Express\Express\obj\Debug\netcoreapp3.1\Express.csprojAssemblyReference.cache
+G:\EC\Express\Express\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
+G:\EC\Express\Express\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+G:\EC\Express\Express\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll

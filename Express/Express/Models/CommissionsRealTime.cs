@@ -10,12 +10,12 @@ namespace Express.Models
     public class CommissionsRealTime
     {
         [Key]
-        public Guid IDComRT { get; set; }
+        public string IDComRT { get; set; }
         public float Value { get; set; }
         public Boolean Approved { get; set; }
-        public Guid Billid { get; set; }
+        public string Billid { get; set; }
         public virtual Bill Bill { get; set; }
-        public Guid IDComR { get; set; }
+        public string IDComR { get; set; }
         public CommissionsRule CommissionsRule { get; set; }
     }
 }

@@ -28,6 +28,7 @@ namespace Express
         {
             services.AddControllers();
             services.AddCors();
+            services.AddControllers().AddNewtonsoftJson();
 
             services.AddDbContext<DBExpressContext>(options =>
             options.UseSqlServer(Configuration.GetConnectionString("DevConnection")));

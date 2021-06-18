@@ -30,7 +30,7 @@ namespace Express.Controllers
 
         // GET: api/Province/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Provinces>> GetProvince(Guid id)
+        public async Task<ActionResult<Provinces>> GetProvince(string id)
         {
             var province = await _context.Provinces.FindAsync(id);
 
@@ -46,7 +46,7 @@ namespace Express.Controllers
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutProvince(Guid id, Provinces province)
+        public async Task<IActionResult> PutProvince(string id, Provinces province)
         {
             if (id != province.IDProvince)
             {
@@ -114,7 +114,7 @@ namespace Express.Controllers
 
         // DELETE: api/Province/5
         [HttpDelete("{id}")]
-        public async Task<ActionResult<Provinces>> DeleteProvince(Guid id)
+        public async Task<ActionResult<Provinces>> DeleteProvince(string id)
         {
             var province = await _context.Provinces.FindAsync(id);
             if (province == null)
@@ -128,7 +128,7 @@ namespace Express.Controllers
             return province;
         }
 
-        private bool ProvinceExists(Guid id)
+        private bool ProvinceExists(string id)
         {
             return _context.Provinces.Any(e => e.IDProvince == id);
         }

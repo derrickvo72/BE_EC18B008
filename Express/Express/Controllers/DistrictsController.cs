@@ -30,7 +30,7 @@ namespace Express.Controllers
 
         // GET: api/District/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Districts>> GetDistrict(Guid id)
+        public async Task<ActionResult<Districts>> GetDistrict(string id)
         {
             var district = await _context.Districts.FindAsync(id);
 
@@ -46,7 +46,7 @@ namespace Express.Controllers
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutDistrict(Guid id, Districts district)
+        public async Task<IActionResult> PutDistrict(string id, Districts district)
         {
             if (id != district.IDDistrict)
             {
@@ -114,7 +114,7 @@ namespace Express.Controllers
 
         // DELETE: api/District/5
         [HttpDelete("{id}")]
-        public async Task<ActionResult<Districts>> DeleteDistrict(Guid id)
+        public async Task<ActionResult<Districts>> DeleteDistrict(string id)
         {
             var district = await _context.Districts.FindAsync(id);
             if (district == null)
@@ -128,7 +128,7 @@ namespace Express.Controllers
             return district;
         }
 
-        private bool DistrictExists(Guid id)
+        private bool DistrictExists(string id)
         {
             return _context.Districts.Any(e => e.IDDistrict == id);
         }

@@ -30,7 +30,7 @@ namespace Express.Controllers
 
         // GET: api/CommissionsRule/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<CommissionsRule>> GetCommissionsRule(Guid id)
+        public async Task<ActionResult<CommissionsRule>> GetCommissionsRule(string id)
         {
             var commissionsRule = await _context.CommissionsRules.FindAsync(id);
 
@@ -46,7 +46,7 @@ namespace Express.Controllers
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutCommissionsRule(Guid id, CommissionsRule commissionsRule)
+        public async Task<IActionResult> PutCommissionsRule(string id, CommissionsRule commissionsRule)
         {
             if (id != commissionsRule.IDComR)
             {
@@ -114,7 +114,7 @@ namespace Express.Controllers
 
         // DELETE: api/CommissionsRule/5
         [HttpDelete("{id}")]
-        public async Task<ActionResult<CommissionsRule>> DeleteCommissionsRule(Guid id)
+        public async Task<ActionResult<CommissionsRule>> DeleteCommissionsRule(string id)
         {
             var commissionsRule = await _context.CommissionsRules.FindAsync(id);
             if (commissionsRule == null)
@@ -128,7 +128,7 @@ namespace Express.Controllers
             return commissionsRule;
         }
 
-        private bool CommissionsRuleExists(Guid id)
+        private bool CommissionsRuleExists(string id)
         {
             return _context.CommissionsRules.Any(e => e.IDComR == id);
         }

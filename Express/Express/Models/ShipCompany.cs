@@ -10,14 +10,14 @@ namespace Express.Models
     public class ShipCompany
     {
         [Key]
-        public Guid IDCompany { get; set; }
+        public string IDCompany { get; set; }
         public string CompanyName { get; set; }
         public string ComAddress { get; set; }
         public string MST { get; set; }
         public string Email { get; set; }
         public string RegisterDay { get; set; }
         public string EndDay { get; set; }
-        public Guid SubDisid { get; set; }
+        public string SubDisid { get; set; }
         public virtual SubDistricts SubDistrict { get; set; }
         public ICollection<CommissionsRule> CommissionsRules { get; set; }
         public ICollection<ShippingFee> ShippingFees { get; set; }

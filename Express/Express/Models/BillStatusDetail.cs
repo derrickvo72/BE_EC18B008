@@ -9,14 +9,14 @@ namespace Express.Models
     public class BillStatusDetail
     {
         [Key]
-        public Guid IDStatus { get; set; }
+        public string IDStatus { get; set; }
         public Boolean Prepair { get; set; }
         public Boolean ShipReceive { get; set; }
         public Boolean Shipping { get; set; }
         public Boolean PostReceive { get; set; }
         public Boolean ShippingToC { get; set; }
         public Boolean ShippingDone { get; set; }
-        public Guid Billid { get; set; }
+        public string Billid { get; set; }
         public virtual Bill Bill { get; set; }
     }
 }

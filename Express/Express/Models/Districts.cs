@@ -10,11 +10,11 @@ namespace Express.Models
     public class Districts
     {
         [Key]
-        public Guid IDDistrict { get; set; }
+        public string IDDistrict { get; set; }
         public string DistrictName { get; set; }
         public Boolean CentralDistrict { get; set; }
         public ICollection<SubDistricts> SubDistricts { get; set; }
-        public Guid Proid { get; set; }
+        public string Proid { get; set; }
         public Provinces Province { get; set; }
     }
 }

@@ -10,10 +10,10 @@ namespace Express.Models
     public class SubDistricts
     {
         [Key]
-        public Guid IDSubDistrict { get; set; }
+        public string IDSubDistrict { get; set; }
         public string SubDistrictName { get; set; }
         public virtual Users User { get; set; }
-        public Guid Disid { get; set; }
+        public string Disid { get; set; }
         public Districts District { get; set; }
         public virtual ShipCompany ShipCompany { get; set; }
     }

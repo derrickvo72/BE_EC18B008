@@ -40,12 +40,19 @@ namespace Express.Controllers
 
             return commissionsRealTime;
         }
+        // GET: api/CommisssionsRealTimes/search
+        [HttpGet("search")]
+        public IActionResult SearchById([FromForm] string id)
+        {
+            var idCom = _context.CommissionsRealTimes.Where(x => x.Billid.Contains(id)).ToList();
 
-            // PUT: api/CommissionsRealTime/5
-            // To protect from overposting attacks, enable the specific properties you want to bind to, for
-            // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
-            [HttpPut("{id}")]
-        public async Task<IActionResult> PutCommissionsRealTime(Guid id, CommissionsRealTime commissionsRealTime)
+            return Ok(idCom);
+        }
+        // PUT: api/CommissionsRealTime/5
+        // To protect from overposting attacks, enable the specific properties you want to bind to, for
+        // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
+        [HttpPut("{id}")]
+        public async Task<IActionResult> PutCommissionsRealTime(string id, CommissionsRealTime commissionsRealTime)
         {
             if (id != commissionsRealTime.IDComRT)
             {
@@ -113,7 +120,7 @@ namespace Express.Controllers
 
             // DELETE: api/CommissionsRealTime/5
             [HttpDelete("{id}")]
-        public async Task<ActionResult<CommissionsRealTime>> DeleteCommissionsRealTime(Guid id)
+        public async Task<ActionResult<CommissionsRealTime>> DeleteCommissionsRealTime(string id)
         {
             var commissionsRealTime = await _context.CommissionsRealTimes.FindAsync(id);
             if (commissionsRealTime == null)
@@ -127,7 +134,7 @@ namespace Express.Controllers
             return commissionsRealTime;
         }
 
-        private bool CommissionsRealTimeExists(Guid id)
+        private bool CommissionsRealTimeExists(string id)
         {
             return _context.CommissionsRealTimes.Any(e => e.IDComRT== id);
         }

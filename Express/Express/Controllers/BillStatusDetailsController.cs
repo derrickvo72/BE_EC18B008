@@ -30,7 +30,7 @@ namespace Express.Controllers
 
         // GET: api/BillStatusDetail/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<BillStatusDetail>> GetBillStatusDetail(Guid id)
+        public async Task<ActionResult<BillStatusDetail>> GetBillStatusDetail(string id)
         {
             var billStatusDetail = await _context.BillStatusDetails.FindAsync(id);
 
@@ -46,7 +46,7 @@ namespace Express.Controllers
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutBillStatusDetail(Guid id, BillStatusDetail billStatusDetail)
+        public async Task<IActionResult> PutBillStatusDetail(string id, BillStatusDetail billStatusDetail)
         {
             if (id != billStatusDetail.IDStatus)
             {
@@ -73,7 +73,14 @@ namespace Express.Controllers
 
             return NoContent();
         }
+        // GET: api/BillStatusDetails/search
+        [HttpGet("search")]
+        public IActionResult SearchById([FromForm] string id)
+        {
+            var idBill = _context.BillStatusDetails.Where(x => x.Billid.Contains(id)).ToList();
 
+            return Ok(idBill);
+        }
         // POST: api/BillStatusDetail
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
@@ -114,7 +121,7 @@ namespace Express.Controllers
 
         // DELETE: api/BillStatusDetail/5
         [HttpDelete("{id}")]
-        public async Task<ActionResult<BillStatusDetail>> DeleteBillStatusDetail(Guid id)
+        public async Task<ActionResult<BillStatusDetail>> DeleteBillStatusDetail(string id)
         {
             var billStatusDetail = await _context.BillStatusDetails.FindAsync(id);
             if (billStatusDetail == null)
@@ -128,7 +135,7 @@ namespace Express.Controllers
             return billStatusDetail;
         }
 
-        private bool BillStatusDetailExists(Guid id)
+        private bool BillStatusDetailExists(string id)
         {
             return _context.BillStatusDetails.Any(e => e.IDStatus == id);
         }

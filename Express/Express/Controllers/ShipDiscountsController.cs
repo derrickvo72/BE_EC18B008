@@ -30,7 +30,7 @@ namespace Express.Controllers
 
         // GET: api/ShipDiscount/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<ShipDiscount>> GetShipDiscount(Guid id)
+        public async Task<ActionResult<ShipDiscount>> GetShipDiscount(string id)
         {
             var shipDiscount = await _context.ShipDiscounts.FindAsync(id);
 
@@ -46,7 +46,7 @@ namespace Express.Controllers
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutShipDiscount(Guid id, ShipDiscount shipDiscount)
+        public async Task<IActionResult> PutShipDiscount(string id, ShipDiscount shipDiscount)
         {
             if (id != shipDiscount.IDDis)
             {
@@ -114,7 +114,7 @@ namespace Express.Controllers
 
         // DELETE: api/ShipDiscount/5
         [HttpDelete("{id}")]
-        public async Task<ActionResult<ShipDiscount>> DeleteShipDiscount(Guid id)
+        public async Task<ActionResult<ShipDiscount>> DeleteShipDiscount(string id)
         {
             var shipDiscount = await _context.ShipDiscounts.FindAsync(id);
             if (shipDiscount == null)
@@ -128,7 +128,7 @@ namespace Express.Controllers
             return shipDiscount;
         }
 
-        private bool ShipDiscountExists(Guid id)
+        private bool ShipDiscountExists(string id)
         {
             return _context.ShipDiscounts.Any(e => e.IDDis == id);
         }

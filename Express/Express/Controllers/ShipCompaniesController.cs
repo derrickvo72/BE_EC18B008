@@ -30,7 +30,7 @@ namespace Express.Controllers
 
         // GET: api/ShipCompany/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<ShipCompany>> GetShipCompany(Guid id)
+        public async Task<ActionResult<ShipCompany>> GetShipCompany(string id)
         {
             var shipCompany = await _context.ShipCompanies.FindAsync(id);
 
@@ -46,7 +46,7 @@ namespace Express.Controllers
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutShipCompany(Guid id, ShipCompany shipCompany)
+        public async Task<IActionResult> PutShipCompany(string id, ShipCompany shipCompany)
         {
             if (id != shipCompany.IDCompany)
             {
@@ -114,7 +114,7 @@ namespace Express.Controllers
 
         // DELETE: api/ShipCompany/5
         [HttpDelete("{id}")]
-        public async Task<ActionResult<ShipCompany>> DeleteShipCompany(Guid id)
+        public async Task<ActionResult<ShipCompany>> DeleteShipCompany(string id)
         {
             var shipCompany = await _context.ShipCompanies.FindAsync(id);
             if (shipCompany == null)
@@ -128,7 +128,7 @@ namespace Express.Controllers
             return shipCompany;
         }
 
-        private bool ShipCompanyExists(Guid id)
+        private bool ShipCompanyExists(string id)
         {
             return _context.ShipCompanies.Any(e => e.IDCompany == id);
         }

@@ -30,7 +30,7 @@ namespace Express.Controllers
 
         // GET: api/ShippingFee/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<ShippingFee>> GetShippingFee(Guid id)
+        public async Task<ActionResult<ShippingFee>> GetShippingFee(string id)
         {
             var shippingFee = await _context.ShippingFees.FindAsync(id);
 
@@ -46,7 +46,7 @@ namespace Express.Controllers
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutShippingFee(Guid id, ShippingFee shippingFee)
+        public async Task<IActionResult> PutShippingFee(string id, ShippingFee shippingFee)
         {
             if (id != shippingFee.IDFee)
             {
@@ -73,7 +73,14 @@ namespace Express.Controllers
 
             return NoContent();
         }
-
+        // GET: api/ShippingFees/searchfee
+        [HttpGet("searchfee")]
+        public IActionResult Searchfee([FromForm] string idfee, float kg)
+        {
+            var idCom = _context.ShippingFees.Where(x => (x.IDFee.Contains(idfee))).ToList();
+     
+            return  Ok(idCom);
+        }
         // POST: api/ShippingFee
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
@@ -114,7 +121,7 @@ namespace Express.Controllers
 
         // DELETE: api/ShippingFee/5
         [HttpDelete("{id}")]
-        public async Task<ActionResult<ShippingFee>> DeleteShippingFee(Guid id)
+        public async Task<ActionResult<ShippingFee>> DeleteShippingFee(string id)
         {
             var shippingFee = await _context.ShippingFees.FindAsync(id);
             if (shippingFee == null)
@@ -128,7 +135,7 @@ namespace Express.Controllers
             return shippingFee;
         }
 
-        private bool ShippingFeeExists(Guid id)
+        private bool ShippingFeeExists(string id)
         {
             return _context.ShippingFees.Any(e => e.IDFee == id);
         }

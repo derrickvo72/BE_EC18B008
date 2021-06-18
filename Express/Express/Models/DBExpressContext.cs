@@ -78,6 +78,7 @@ namespace Express.Models
             .HasOne<ShipCompany>(s => s.ShipCompany)
             .WithMany(g => g.ShipDiscounts)
             .HasForeignKey(s => s.Compid);
+
         }
         public override int SaveChanges()
         {

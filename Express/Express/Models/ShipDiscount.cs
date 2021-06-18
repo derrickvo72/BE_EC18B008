@@ -10,10 +10,10 @@ namespace Express.Models
     public class ShipDiscount
     {
         [Key]
-        public Guid IDDis { get; set; }
+        public string IDDis { get; set; }
         public string DisName { get; set; }
         public float ValueDis { get; set; }
-        public Guid Compid { get; set; }
+        public string Compid { get; set; }
         public ShipCompany ShipCompany { get; set; }
     }
 }

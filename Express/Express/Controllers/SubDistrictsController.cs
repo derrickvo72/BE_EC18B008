@@ -12,48 +12,55 @@ namespace Express.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class BillsController : ControllerBase
+    public class SubDistrictsController : ControllerBase
     {
         private readonly DBExpressContext _context;
 
-        public BillsController(DBExpressContext context)
+        public SubDistrictsController(DBExpressContext context)
         {
             _context = context;
         }
 
-        // GET: api/Bill
+        // GET: api/SubDistrict
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Bill>>> GetBills()
+        public async Task<ActionResult<IEnumerable<SubDistricts>>> GetSubDistricts()
         {
-            return await _context.Bills.ToListAsync();
+            return await _context.SubDistricts.ToListAsync();
         }
 
-        // GET: api/Bill/5
+        // GET: api/SubDistrict/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Bill>> GetBill(Guid id)
+        public async Task<ActionResult<SubDistricts>> GetSubDistrict(Guid id)
         {
-            var bill = await _context.Bills.FindAsync(id);
+            var subDistrict = await _context.SubDistricts.FindAsync(id);
 
-            if (bill == null)
+            if (subDistrict == null)
             {
                 return NotFound();
             }
 
-            return bill;
+            return subDistrict;
         }
+        // GET: api/SubDistrict/search
+        [HttpGet("search")]
+        public IActionResult SearchByName([FromForm] string subDistrictName)
+        {
+            var subDistrict = _context.SubDistricts.Where(x => x.SubDistrictName.Contains(subDistrictName)).ToList();
 
-        // PUT: api/Bill/5
+            return Ok(subDistrict);
+        }
+        // PUT: api/SubDistrict/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutBill(Guid id, Bill bill)
+        public async Task<IActionResult> PutSubDistrict(string id, SubDistricts subDistrict)
         {
-            if (id != bill.IDBill)
+            if (id != subDistrict.IDSubDistrict)
             {
                 return BadRequest();
             }
 
-            _context.Entry(bill).State = EntityState.Modified;
+            _context.Entry(subDistrict).State = EntityState.Modified;
 
             try
             {
@@ -61,7 +68,7 @@ namespace Express.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!BillExists(id))
+                if (!SubDistrictExists(id))
                 {
                     return NotFound();
                 }
@@ -74,11 +81,11 @@ namespace Express.Controllers
             return NoContent();
         }
 
-        // POST: api/Bill
+        // POST: api/SubDistrict
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPost]
-        public async Task<ActionResult<Bill>> PostBill([FromForm] Bill bill)
+        public async Task<ActionResult<SubDistricts>> PostSubDistrict([FromForm] SubDistricts subDistrict)
         {
             if (HttpContext.Request.Form.Files.Count > 0)
             {
@@ -92,14 +99,14 @@ namespace Express.Controllers
                 }
 
             }
-            _context.Bills.Add(bill);
+            _context.SubDistricts.Add(subDistrict);
             try
             {
                 await _context.SaveChangesAsync();
             }
             catch (DbUpdateException)
             {
-                if (BillExists(bill.IDBill))
+                if (SubDistrictExists(subDistrict.IDSubDistrict))
                 {
                     return Conflict();
                 }
@@ -109,28 +116,28 @@ namespace Express.Controllers
                 }
             }
 
-            return CreatedAtAction("GetBill", new { id = bill.IDBill }, bill);
+            return CreatedAtAction("GetSubDistrict", new { id = subDistrict.IDSubDistrict }, subDistrict);
         }
 
-        // DELETE: api/Bill/5
+        // DELETE: api/SubDistrict/5
         [HttpDelete("{id}")]
-        public async Task<ActionResult<Bill>> DeleteBill(Guid id)
+        public async Task<ActionResult<SubDistricts>> DeleteSubDistrict(string id)
         {
-            var bill = await _context.Bills.FindAsync(id);
-            if (bill == null)
+            var subDistrict = await _context.SubDistricts.FindAsync(id);
+            if (subDistrict == null)
             {
                 return NotFound();
             }
 
-            _context.Bills.Remove(bill);
+            _context.SubDistricts.Remove(subDistrict);
             await _context.SaveChangesAsync();
 
-            return bill;
+            return subDistrict;
         }
 
-        private bool BillExists(Guid id)
+        private bool SubDistrictExists(string id)
         {
-            return _context.Bills.Any(e => e.IDBill == id);
+            return _context.SubDistricts.Any(e => e.IDSubDistrict == id);
         }
     }
 }

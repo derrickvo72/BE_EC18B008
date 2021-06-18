@@ -30,7 +30,7 @@ namespace Express.Controllers
 
         // GET: api/ User/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Users>> GetUser(Guid id)
+        public async Task<ActionResult<Users>> GetUser(string id)
         {
             var user = await _context.Users.FindAsync(id);
 
@@ -46,7 +46,7 @@ namespace Express.Controllers
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutUser(Guid id, Users user)
+        public async Task<IActionResult> PutUser(string id, Users user)
         {
             if (id != user.IDUser)
             {
@@ -114,7 +114,7 @@ namespace Express.Controllers
 
         // DELETE: api/ User/5
         [HttpDelete("{id}")]
-        public async Task<ActionResult<Users>> DeleteUser(Guid id)
+        public async Task<ActionResult<Users>> DeleteUser(string id)
         {
             var user = await _context.Users.FindAsync(id);
             if (user == null)
@@ -128,7 +128,7 @@ namespace Express.Controllers
             return user;
         }
 
-        private bool UserExists(Guid id)
+        private bool UserExists(string id)
         {
             return _context.Users.Any(e => e.IDUser == id);
         }

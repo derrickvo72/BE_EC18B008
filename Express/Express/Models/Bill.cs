@@ -9,17 +9,21 @@ namespace Express.Models
     public class Bill
     {
         [Key]
-        public Guid IDBill { get; set; }
+        public string IDBill { get; set; }
         public string SendAdd { get; set; }
+        public string SendPhone { get; set; }
         public string ReceiveAdd { get; set; }
+        public string ReceivePhone { get; set; }
         public float ShippingFee { get; set; }
         public float weight { get; set; }
         public string ShippingTime { get; set; }
+        public string PaymentMethod { get; set; }
         public Boolean ShippingDone { get; set; }
         public virtual BillStatusDetail StatusDetail { get; set; }
         public virtual CommissionsRealTime CommisstionsRealTime { get; set; }
-        public Guid Userid { get; set; }
+        public string Userid { get; set; }
         public Users User { get; set; }
+        public string Compid { get; set; }
 
     }
 }

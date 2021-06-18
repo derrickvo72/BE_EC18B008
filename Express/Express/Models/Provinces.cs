@@ -10,7 +10,7 @@ namespace Express.Models
     public class Provinces
     {
         [Key]
-        public Guid IDProvince { get; set; }
+        public string IDProvince { get; set; }
         public string ProvinceName { get; set; }
         public Boolean CentralProvince { get; set; }
         public string RegionName { get; set; }
