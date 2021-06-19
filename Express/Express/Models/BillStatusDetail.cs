@@ -10,12 +10,12 @@ namespace Express.Models
     {
         [Key]
         public string IDStatus { get; set; }
-        public string Prepair { get; set; }
-        public string ShipReceive { get; set; }
-        public string Shipping { get; set; }
-        public string PostReceive { get; set; }
-        public string ShippingToC { get; set; }
-        public string ShippingDone { get; set; }
+        public Boolean Prepair { get; set; }
+        public Boolean ShipReceive { get; set; }
+        public Boolean Shipping { get; set; }
+        public Boolean PostReceive { get; set; }
+        public Boolean ShippingToC { get; set; }
+        public Boolean ShippingDone { get; set; }
         public string Billid { get; set; }
         public virtual Bill Bill { get; set; }
     }

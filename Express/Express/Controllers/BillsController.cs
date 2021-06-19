@@ -25,7 +25,8 @@ namespace Express.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Bill>>> GetBills()
         {
-            return await _context.Bills.ToListAsync();
+            string companyId = HttpContext.Request.Query["companyId"].ToString();
+            return await _context.Bills.Where(bill => string.IsNullOrEmpty(companyId) ? true : bill.Compid == companyId).ToListAsync();
         }
 
         // GET: api/Bill/5

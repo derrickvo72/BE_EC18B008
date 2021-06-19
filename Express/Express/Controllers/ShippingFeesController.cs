@@ -75,11 +75,12 @@ namespace Express.Controllers
         }
         // GET: api/ShippingFees/searchfee
         [HttpGet("searchfee")]
-        public IActionResult Searchfee([FromForm] string idfee, float kg)
+        public IActionResult Searchfee()
         {
+            string idfee = HttpContext.Request.Query["idfee"].ToString();
             var idCom = _context.ShippingFees.Where(x => (x.IDFee.Contains(idfee))).ToList();
-     
-            return  Ok(idCom);
+
+            return Ok(idCom);
         }
         // POST: api/ShippingFee
         // To protect from overposting attacks, enable the specific properties you want to bind to, for

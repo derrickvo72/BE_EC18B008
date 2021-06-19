@@ -9357,11 +9357,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "G:\\EC\\Express\\Express\\Express.csproj",
+      "projectUniqueName": "G:\\EC\\Demo\\Express\\Express\\Express\\Express.csproj",
       "projectName": "Express",
-      "projectPath": "G:\\EC\\Express\\Express\\Express.csproj",
+      "projectPath": "G:\\EC\\Demo\\Express\\Express\\Express\\Express.csproj",
       "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-      "outputPath": "G:\\EC\\Express\\Express\\obj\\",
+      "outputPath": "G:\\EC\\Demo\\Express\\Express\\Express\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

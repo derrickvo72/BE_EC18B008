@@ -42,6 +42,11 @@ namespace Express
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseCors(builder => builder
+                .AllowAnyOrigin()
+                .AllowAnyMethod()
+                .AllowAnyHeader());
+
             app.UseRouting();
 
             app.UseAuthorization();
@@ -50,10 +55,6 @@ namespace Express
             {
                 endpoints.MapControllers();
             });
-            app.UseCors(builder => builder
-                .AllowAnyOrigin()
-                .AllowAnyMethod()
-                .AllowAnyHeader());
 
         }
     }

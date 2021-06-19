@@ -186,11 +186,6 @@ namespace Express.Migrations
                     weight = table.Column<float>(type: "real", nullable: false),
                     ShippingTime = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     PaymentMethod = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Prepair = table.Column<bool>(type: "bit", nullable: false),
-                    ShipReceive = table.Column<bool>(type: "bit", nullable: false),
-                    Shipping = table.Column<bool>(type: "bit", nullable: false),
-                    PostReceive = table.Column<bool>(type: "bit", nullable: false),
-                    ShippingToC = table.Column<bool>(type: "bit", nullable: false),
                     ShippingDone = table.Column<bool>(type: "bit", nullable: false),
                     Userid = table.Column<string>(type: "nvarchar(450)", nullable: true),
                     Compid = table.Column<string>(type: "nvarchar(max)", nullable: true)
@@ -211,12 +206,12 @@ namespace Express.Migrations
                 columns: table => new
                 {
                     IDStatus = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    Prepair = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    ShipReceive = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Shipping = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    PostReceive = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    ShippingToC = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    ShippingDone = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Prepair = table.Column<bool>(type: "bit", nullable: false),
+                    ShipReceive = table.Column<bool>(type: "bit", nullable: false),
+                    Shipping = table.Column<bool>(type: "bit", nullable: false),
+                    PostReceive = table.Column<bool>(type: "bit", nullable: false),
+                    ShippingToC = table.Column<bool>(type: "bit", nullable: false),
+                    ShippingDone = table.Column<bool>(type: "bit", nullable: false),
                     Billid = table.Column<string>(type: "nvarchar(450)", nullable: true)
                 },
                 constraints: table =>
